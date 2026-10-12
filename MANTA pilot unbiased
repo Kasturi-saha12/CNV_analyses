@@ -1,0 +1,12 @@
+mkdir -p /data/hestia/ksaha/CNV_crams/MANTA_ub_pilot/Cases
+mkdir -p /data/hestia/ksaha/CNV_crams/MANTA_ub_pilot/Controls
+ls -l /data/hestia/ksaha/CNV_crams/MANTA_ub_pilot
+
+ls -lh /data/hestia/ksaha/CNV_crams/MANTA_ub_pilot/Cases/
+ls -lh /data/hestia/ksaha/CNV_crams/MANTA_ub_pilot/Controls/
+
+df -h /data #check disk space
+
+conda activate manta
+configManta.py --version    #check Manta's version
+
