@@ -72,13 +72,13 @@ mkdir -p ./results/batch_1 #create results directory
 
 #MANTA setup
 #Manta is a tool that detects structural variants (SVs) from sequencing data. For our analysis, we want to identify potential deletions and duplications across the whole genome.
-Requirement
-Input sequencing files: The reads from each individual CRAM files, each with a corresponding CRAI index
-Reference genome: The genome against which the reads are aligned	hg38 reference: Homo_sapiens_assembly38.fasta
-Reference index: Allows software to access the reference efficiently: .fai file 
-Manta software: The program that detects structural variants	Manta 1.6.0, installed in the manta Conda environment
-Output directory: Where each sample's results will be stored- 	./results/batch_1/
-Computing resources: CPU resources used to process each sample	-j 8, allowing up to 8 concurrent jobs within a sample's workflow
+#Requirement
+#Input sequencing files: The reads from each individual CRAM files, each with a corresponding CRAI index
+#Reference genome: The genome against which the reads are aligned	hg38 reference: Homo_sapiens_assembly38.fasta
+#Reference index: Allows software to access the reference efficiently: .fai file 
+#Manta software: The program that detects structural variants	Manta 1.6.0, installed in the manta Conda environment
+#Output directory: Where each sample's results will be stored- 	./results/batch_1/
+#Computing resources: CPU resources used to process each sample	-j 8, allowing up to 8 concurrent jobs within a sample's workflow
 
 #define the locations of all files required for MANTA to run
 BASE="/data/hestia/ksaha"
