@@ -155,3 +155,22 @@ done
 #LOOP ENDING------------------------------------------------------------------------------------------------------------
 
 #=======================================================================================================================
+
+#check if all results there
+#LOOP STARTING-----------------------------------------------------------------------------------------------------------
+for dir in ./results/batch_1/CATPD_*; do
+    [ -d "$dir" ] || continue
+    sample=$(basename "$dir")
+
+    if [ -s "$dir/results/variants/diploidSV.vcf.gz" ] &&
+       [ -s "$dir/results/variants/diploidSV.vcf.gz.tbi" ] &&
+       [ -s "$dir/results/variants/candidateSV.vcf.gz" ] &&
+       [ -s "$dir/results/variants/candidateSmallIndels.vcf.gz" ]; then
+        echo "$sample: OUTPUT FILES PRESENT"
+    else
+        echo "$sample: MISSING OR INCOMPLETE OUTPUTS"
+    fi
+done
+#LOOP ENDING-----------------------------------------------------------------------------------------------------------
+
+
